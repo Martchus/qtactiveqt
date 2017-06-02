@@ -1,4 +1,3 @@
-option(host_build)
 CONFIG += force_bootstrap
 SOURCES = main.cpp
 
