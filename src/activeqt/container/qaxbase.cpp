@@ -2202,6 +2202,10 @@ void MetaObjectGenerator::readClassInfo()
             const QStringList versions = controls.childGroups();
             for (const QString &version : versions) {
                 tlfile = controls.value(QLatin1Char('/') + version + QLatin1String("/0/win32/.")).toString();
+                if(tlfile.isEmpty())
+                {
+                  tlfile = controls.value(QLatin1Char('/') + version + QLatin1String("/0/win64/.")).toString();
+                }
                 if (!tlfile.isEmpty())
                     break;
             }

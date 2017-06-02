@@ -1586,6 +1586,10 @@ int main(int argc, char **argv)
             typeLib = settings.value(keyPrefix + QLatin1String("win32/.")).toString();
             if (QFile::exists(typeLib))
                 break;
+            typeLib = settings.value(QLatin1String("/") + codes.at(c) + QLatin1String("/0/win64/.")).toByteArray();
+            if (QFile::exists(typeLib)) {
+                break;
+            }
         }
 
         if (!typeLib.isEmpty())
@@ -1650,6 +1654,10 @@ int main(int argc, char **argv)
             typeLib = settings.value(keyPrefix + QLatin1String("win32/.")).toString();
             if (QFile::exists(typeLib))
                 break;
+            typeLib = settings.value(key + QLatin1String("/") + codes.at(c) + QLatin1String("/win64/.")).toByteArray();
+            if (QFile::exists(typeLib)) {
+                break;
+            }
         }
     }
 
