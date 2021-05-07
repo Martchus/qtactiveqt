@@ -5,12 +5,13 @@
 #####################################################################
 
 qt_get_tool_target_name(target_name idc)
-qt_internal_add_tool(${target_name} # special case
+qt_internal_add_app(${target_name} # special case
 #    BOOTSTRAP # special case
     TARGET_DESCRIPTION "Active Qt Interface Description Compiler"
-    TOOLS_TARGET AxContainer # special case
     SOURCES
         main.cpp
+    PUBLIC_LIBRARIES
+        Qt::Core
 )
 
 #### Keys ignored in scope 1:.:.:idc.pro:<TRUE>:
