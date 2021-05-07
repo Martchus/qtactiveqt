@@ -6,9 +6,8 @@
 #####################################################################
 
 qt_get_tool_target_name(target_name dumpdoc)
-qt_internal_add_tool(${target_name}
+qt_internal_add_app(${target_name}
     TARGET_DESCRIPTION "Active Qt DumpDoc"
-    TOOLS_TARGET AxContainer
     SOURCES
         main.cpp
     LIBRARIES
