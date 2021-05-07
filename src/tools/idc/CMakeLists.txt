@@ -5,12 +5,13 @@
 #####################################################################
 
 qt_get_tool_target_name(target_name idc)
-qt_internal_add_tool(${target_name} # special case
+qt_internal_add_app(${target_name} # special case
 #    BOOTSTRAP # special case
     TARGET_DESCRIPTION "Active Qt Interface Description Compiler"
-    TOOLS_TARGET AxServer # special case
     SOURCES
         main.cpp
+    PUBLIC_LIBRARIES
+        Qt::Core
 )
 qt_internal_return_unless_building_tools()
 
