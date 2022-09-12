@@ -560,7 +560,7 @@ bool generateClassImpl(QTextStream &out, const QMetaObject *mo, const QByteArray
             namespaceForTypeEntry = namespaceForType.constFind(type.toUtf8());
         if (namespaceForTypeEntry != namespaceForType.constEnd()) {
             const auto ns = QString::fromUtf8(namespaceForTypeEntry.value());
-            moCode.insert(startType, ns + QStringView(u"::"));
+            moCode.insert(startType, ns + QStringLiteral("::"));
         }
         nextTypeAndForceComplete = startType + lengthType;
     } while (true);
