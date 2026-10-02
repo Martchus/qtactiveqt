@@ -17,7 +17,7 @@
 // We mean it.
 //
 
-#include <Unknwn.h>
+#include <unknwn.h>
 
 #include <QtCore/qtconfigmacros.h>
 
